@@ -1,0 +1,6 @@
+  637  ../hapLegSampFilter --hap hap.gz --leg legend.gz --keepSites sites --base out
+  641  /data/fenghuang/not-backed-up/kretzsch/proj/marchini/scripts/hapLegSampFilter.pl base=gold hap=hap.gz leg=legend.gz keepSites=sites
+  643  diff <(gzip -dc gold.leg.gz) out.legend 
+  644  diff <(zcat out.hap.gz) <(zcat gold.hap.gz )
+  653  history | grep -e 637 -e 641 -e 643 -e 644
+  654  history | grep -e 637 -e 641 -e 643 -e 644 > README
